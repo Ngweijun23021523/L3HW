@@ -43,6 +43,11 @@ const MyApp = () => {
             paddingTop: 40,
             textAlign: 'center',
             fontStyle: 'italic',
+            marginTop:40,
+            backgroundColor:'green',
+            borderWidth:5,
+
+
         },
         buttonContainer: {
             position: 'absolute',
@@ -50,6 +55,21 @@ const MyApp = () => {
             width: '100%',
             padding: 10,
             backgroundColor: '#fff',
+        },
+        Text:{
+            fontSize: 24,
+            fontWeight: 'bold',
+            color: 'white',
+            textAlign: 'center',
+            fontStyle: 'italic',
+            backgroundColor:'#964B00',
+            borderWidth:5,
+
+        },
+        image:{
+            borderWidth:5,
+            width:415 ,
+            height:415 ,
         }
     });
 
@@ -58,9 +78,10 @@ const MyApp = () => {
             <Text style={styles.Title}>
                 <Icon name="paw" size={24} /> Animal Quiz
             </Text>
-            <ScrollView contentContainerStyle={{ padding: 20, paddingTop: 50, paddingBottom: 100 }}>
-                <Text>What animal is this?</Text>
-                <Image source={require('./img/crocodile.jpg')} style={{ width: 400, height: 400 }} />
+            <ScrollView contentContainerStyle={{  paddingBottom: 100 ,borderWidth:5}}>
+                <Text style={styles.Text}>What animal is this?</Text>
+                <Image source={require('./img/crocodile.jpg')} style={styles.image} />
+
                 <RNPickerSelect
                     onValueChange={(value) => setCrocoType(value)}
                     items={[
@@ -70,8 +91,8 @@ const MyApp = () => {
                     ]}
                 />
 
-                <Text>What animal is this?</Text>
-                <Image source={require('./img/leopard.jpg')} style={{ width: 400, height: 400 }} />
+                <Text style={styles.Text}>What animal is this?</Text>
+                <Image source={require('./img/leopard.jpg')} style={ styles.image} />
                 <RNPickerSelect
                     onValueChange={(value) => setLeoType(value)}
                     items={[
@@ -81,8 +102,8 @@ const MyApp = () => {
                     ]}
                 />
 
-                <Text>What animal is this?</Text>
-                <Image source={require('./img/owl.jpg')} style={{ width: 400, height: 400 }} />
+                <Text style={styles.Text}>What animal is this?</Text>
+                <Image source={require('./img/owl.jpg')} style={styles.image} />
                 <RNPickerSelect
                     onValueChange={(value) => setOwlType(value)}
                     items={[
