@@ -45,7 +45,7 @@ const MyApp = () => {
             fontStyle: 'italic',
             marginTop:40,
             backgroundColor:'green',
-            borderWidth:5,
+            borderWidth:9,
 
 
         },
@@ -67,18 +67,26 @@ const MyApp = () => {
 
         },
         image:{
-            borderWidth:5,
-            width:415 ,
-            height:415 ,
-        }
+            width:350 ,
+            height:350,
+            alignSelf: 'center',
+            borderColor: 'brown',   // Add border color
+            borderRadius: 10,
+            borderWidth:5
+
+        },
+
+
+
+
     });
 
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, }}>
             <Text style={styles.Title}>
                 <Icon name="paw" size={24} /> Animal Quiz
             </Text>
-            <ScrollView contentContainerStyle={{  paddingBottom: 100 ,borderWidth:5}}>
+            <ScrollView contentContainerStyle={{  paddingBottom: 100 ,borderWidth:5,}}>
                 <Text style={styles.Text}>What animal is this?</Text>
                 <Image source={require('./img/crocodile.jpg')} style={styles.image} />
 
@@ -111,6 +119,7 @@ const MyApp = () => {
                         { label: 'eagle', value: 'eagle' },
                         { label: 'crow', value: 'crow' },
                     ]}
+
                 />
             </ScrollView>
             <View style={styles.buttonContainer}>
